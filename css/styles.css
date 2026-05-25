@@ -1,0 +1,224 @@
+:root {
+    --color-principal: rgb(0, 41, 128);
+    --color-secundario: #34c4a7;
+    --color-fondo: #6a8644;
+    --color-tarjeta: #ffffff;
+    --color-texto: #333333;
+    --color-primo: #27ae60;
+}
+
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #bdc3c7;
+    margin-bottom: 1rem;
+}
+
+/* Contenedor Principal */
+.contenedor {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: var(--color-tarjeta);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta h3 {
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-fondo);
+    padding-bottom: 0.5rem;
+}
+
+ol {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #117a65;
+}
+
+/* Resultados */
+.placeholder-texto {
+    color: #7f8c8d;
+    text-align: center;
+    font-style: italic;
+}
+
+.item-numero {
+    padding: 0.5rem 1rem;
+    background-color: #eaecee;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.es-primo {
+    background-color: #d4efdf;
+    border-left: 5px solid var(--color-primo);
+}
+
+.badge-primo {
+    color: var(--color-primo);
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--color-principal);
+    color: white;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-color: #e8f0fe; 
+    }
+
+    .tarjeta {
+        background-color: #ffffff;
+        border: 1px solid #ced4da; 
+        padding: 1.3rem;
+    }
+
+    header {
+        background-color: #826915; 
+    }
+    footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #826915;
+    color: white;
+    margin-top: 3rem;
+    }
+
+    footer a {
+      color: #1abc9c;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        background-color: #fef9e7; 
+        font-family: 'Georgia', Cambria, Times, 'Times New Roman', serif; 
+        font-size: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tarjeta {
+        background-color: #fcfcfc; 
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    .tarjeta h3 {
+        color: #b03a2e; 
+    }
+
+    input[type="number"], button {
+        width: 100%; 
+    }
+    footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: green;
+    color: white;
+    margin-top: 3rem;
+    }
+
+    footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 0.5rem;
+   }
+
+   footer a:hover {
+    text-decoration: underline;
+   }
+}

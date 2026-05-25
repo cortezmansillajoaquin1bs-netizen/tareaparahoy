@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Web: Fibonacci y Primos</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Problemas</h1>
+        <h2>Fibonacci y Números Primos en la Seguridad Numérica</h2>
+        <p><strong>Autor:</strong> Joaquin Cortez Mansilla</p>
+    </header>
+
+    <main class="contenedor">
+        <section class="tarjeta">
+            <h3>Contexto </h3>
+            <p>
+                En el ámbito de la seguridad informática y la criptografía, la generación de claves seguras 
+                suele basarse en propiedades matemáticas complejas. Los números primos son fundamentales para 
+                evitar vulnerabilidades, mientras que la serie de Fibonacci provee una distribución pseudoaleatoria natural. 
+                Este sistema analiza la intersección de ambos mundos: identifica números pertenecientes a la sucesión de 
+                Fibonacci que también poseen la cualidad de ser primos, ideales para códigos de autenticación de alta seguridad.
+            </p>
+        </section>
+
+        <section class="tarjeta">
+            <h3>Explicación del Algoritmo</h3>
+            <p>
+                El sistema funciona en tres pasos sencillos:
+            </p>
+            <ol>
+                <li><strong>Generación:</strong> Se calcula la secuencia de Fibonacci de forma iterativa (sumando los dos números anteriores) partiendo desde 0 y 1.</li>
+                <li><strong>Filtrado:</strong> Cada número generado es evaluado mediante un ciclo para contar cuántos divisores exactos posee.</li>
+                <li><strong>Validación:</strong> Si el número tiene exactamente 2 divisores (el 1 y sí mismo), se clasifica como primo y se resalta en pantalla.</li>
+            </ol>
+        </section>
+
+        <section class="tarjeta">
+            <h3>Simulador de Claves Seguras</h3>
+            <form id="formularioFibonacci" onsubmit="return false;">
+                <label for="cantidad">Cantidad de términos a evaluar:</label>
+                <input type="number" id="cantidad" min="1" max="40" placeholder="Ej. 10" required>
+                
+                <button type="button" id="btnCalcular">Generar y Verificar</button>
+            </form>
+        </section>
+
+        <section class="tarjeta resultado-seccion">
+            <h3>Resultado: </h3>
+            <div id="resultado">
+                <p class="placeholder-texto">Introduce un número arriba para comenzar el análisis.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Enlaces del Proyecto:</p>
+        <a href="https://github.com/cortezmansillajoaquin1bs-netizen/trabajo-paginaweb/upload/main" target="_blank">Repositorio en GitHub</a> | 
+        <a href="https://github.com/cortezmansillajoaquin1bs-netizen/trabajo-paginaweb/upload/main" target="_blank">Página Publicada (GitHub Pages)</a>
+    </footer>
+  
+
+
+    <script src="java script\index.js"></script>
+</body>
+</html>
